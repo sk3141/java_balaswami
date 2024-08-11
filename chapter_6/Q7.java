@@ -18,8 +18,10 @@ public class Q7 {
     System.out.print("n = ");
     int n = in.nextInt();
 
-    if (((a * d) - (c * b)) == 0)
+    if (((a * d) - (c * b)) == 0) {
       System.out.println("Invalid Inputs");
+      return;
+    }
     int x1 = ((m * d) - (b * n)) / ((a * d) - (c * b));
     int x2 = ((n * a) - (m * c)) / ((a * d) - (c * b));
 
