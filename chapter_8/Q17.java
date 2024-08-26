@@ -1,23 +1,18 @@
 package chapter_8;
 import java.util.Scanner;
+
 class BankAccount {
   private String depositorName;
   private String accountNumber;
   private String accountType;
   private double balance;
 
-  public void openAccount() {
-    Scanner s = new Scanner(System.in);
-
-    System.out.print("Enter Depositor name : ");
-    this.depositorName = s.nextLine();
-    System.out.print("Enter Account number : ");
-    this.accountNumber = s.next();
-    System.out.print("Enter Account type : ");
-    this.accountType = s.next();
-    System.out.print("Enter balance : ");
-    this.balance = s.nextDouble();
-  }
+  public BankAccount(String depositorName, String accountNumber, String accountType, double balance) {
+    this.depositorName = depositorName;
+    this.accountNumber = accountNumber;
+    this.accountType = accountType;
+    this.balance = balance;
+}
 
   public void deposit(double amount) {
     if (amount < 0) {
@@ -43,11 +38,11 @@ class BankAccount {
     System.out.println("Balance : " + this.balance);
   }
 }
-public class Q16 {
+public class Q17 {
   public static void main(String args[])
   {
-    BankAccount acc1 = new BankAccount();
-    acc1.openAccount();
+    BankAccount acc1 = new BankAccount("Sahil Kaundal", "87678567", "savings", 8000.00);
+
     acc1.deposit(8000.00);
     acc1.withdraw(800.00);
     acc1.display();    
