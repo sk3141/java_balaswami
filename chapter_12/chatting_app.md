@@ -1,4 +1,4 @@
-#Chatting Application using Socket Programming and Multi Threading
+# Chatting Application using Socket Programming and Multi Threading
 
 The file ChattingServer.java contains a program for a chatting server that relays messages recieved from all clients connected to it through the same port.<br>
 
